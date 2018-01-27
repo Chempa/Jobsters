@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/standard.css">
+    <title data-tf="@pagetitle"></title>
+
+</head>
+
+<body>
+<div id="pagewrapper">
+<div id="header">
+    <a data-tf="@homelinfk"><h1>Jobsters<sub>infinite jobs</sub></h1></a>
+    <hr>
+    <ul id="navilist">
+        <li><a data-tf="@homelink">Home</a></li>
+        <li><a data-tf="@advertiselink">Advertise</a></li>
+        <span data-tf="@iflogin"><span data-tf="@logouttag"><li><a data-tf="@registerlink">Register</a></li>
+        <li><a data-tf="@loginlink">Login</a></li></span>
+        </span>
+        <li><a data-tf="@aboutlink">About</a></li>
+    </ul>
+    <hr>
+</div>
+<div id="sidebar">
+    <div id="searcher"><hr><hr>
+        <form method="post" data-tf="@searchform" name="fm">
+            <input type="text" name="jobtitle" placeholder="eg. Programmer"><br><hr><hr>
+            <input type="text" name="location" placeholder="eg. Kumasi"><br><hr><hr><hr>
+            <input type="text" name="companyname" placeholder="eg.google"><br><hr><hr>
+            <input type="text" name="industryname" placeholder="eg. Constructions"><br><hr><hr>
+            <input type="number" name="jobid" placeholder="Job id eg. 12"><br><hr><hr>
+            <input id="searchbtn" type="submit" value="Search" >
+            <br>
+           <p id="searchmessage" data-tf="@searchmessage"></p>
+            <br><br>
+        </form>
+    </div>
+    
+    <div id="dashboard">
+        <p>Welcome <span >Guest</span></p><br>
+        <form id="userpreference" method="post" data-tf="@userpreference" >
+            <input type="hidden" name="selfcontroller" data-tf="@selfcontroller">
+            <input type="hidden" name="selfaction" data-tf="@selfaction">
+            <div id="usercompanies">
+                <label class="l1">My Companies</label><br><hr><hr>
+                <p data-tf="@foreachcompany">
+                <input  type="checkbox" data-tf="@comval" name="mycompanies[]" onchange="modfn(this)"><span data-tf="@sidebarcompanyname">  Microsoft Ghana</span><br><br></p>
+            </div>
+        
+            <div id="userindustries">
+                <label class="l1">My Industries</label><br><hr><hr>
+                <p data-tf="@foreachindustry">
+                <input type="checkbox" name="myindustries[]" data-tf="@indval" onchange="modfn(this)"><span data-tf="@sidebarindustryname">  Apple Ghana</span><br><br><br></p>
+            </div> 
+            <br><br>
+            
+            <br><br>
+            <hr><hr><input id="updatepreference" type="submit" value="Update">
+
+        </form>
+
+    </div>
+</div>
+<div id="content">
+
+    <div class="cards" data-tf="@foreachcard">
+        <a ><img data-tf="@imagesrc" class="companyimages"></a>
+        <br>
+        <a class="readmore"  data-tf="@readmore">Read more</a>
+        <p data-tf="@jobtitle">Job Title</p>
+        <p data-tf="@location">Location</p>
+        <p data-tf="@companyname">Company</p>
+    </div>
+    
+</div>
+
+<div id="delimiter"></div>
+</div>
+<footer>
+    All Rights Reserved &copy 2017 Cyrux Mensah
+</footer>
+</body>
+</html>

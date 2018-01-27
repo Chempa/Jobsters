@@ -1,0 +1,34 @@
+
+body{
+    background-image: url("../images/sea.jpg");
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.99;
+}
+
+#cproblems{
+    margin-top: 30px;
+    margin-left:10%;
+    margin-right:10%;
+}
+.problems{
+    background-color:rgba(100,100,100,0.5);
+    color:white;
+    text-align:justify;
+    padding: 6px 10px;
+}
+.solpanel{
+    width:50%;
+    height:150px;
+    background-color:rgba(100,100,100,0.5);
+    color:white;
+}
+#movetop{
+    left: 10px;
+    margin-left: 50px;
+
+}

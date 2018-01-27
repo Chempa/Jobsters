@@ -1,0 +1,103 @@
+
+body{
+    /*background-image: url("../images/sea.jpg");*/
+}
+
+
+
+img.books{
+    padding:10px;
+    width:150px;
+    height:200px;
+}
+table{
+    margin-top: 50px;
+    width:80%;
+    border-collapse: collapse;
+    padding:10px;
+    color:white;
+    text-align: center;
+}
+.odd{
+    background-color:rgba(100,100,100,0.5);
+    padding:10px;
+    font-size:14px;
+    height: 350px;
+}
+.even{
+    background-color:rgba(100,100,100,0.5);
+    padding:10px;
+    font-size:14px;
+    height: 350px;
+}
+td{
+    padding: 10px;
+}
+#heading{
+    padding: 20px;
+    font-size: 16px;
+}
+td.bimg{
+    width: 40%;
+}
+.cards{
+    padding: 5px;
+    border:1px solid grey;
+    border-top: 20px solid grey;
+    overflow:hidden;
+    height:140px;
+    width: 360px;
+    margin:5px;
+    margin-bottom: 20px;
+    border-bottom-left-radius:40px;
+    border-top-right-radius:40px;
+    float: left;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+}
+#last{
+    margin-bottom: 20px;
+}
+.readmore{
+    text-decoration: none;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius:10px;
+    padding: 3px;
+    margin-left: 50%;
+    float: right;
+    color: blue;
+    margin-right:10px;
+    border:1px solid grey;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+}
+.readmore:hover{
+
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+.cards:hover{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+}
+#delimiter{
+    margin-bottom:20px;
+}
+
+.companyimages:hover{
+     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+}
+.companyimages{
+    border:1px solid grey;
+    margin:5px;
+    float: right;
+    width: 250px;
+    height: 80px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius:20px;
+    cursor: pointer;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+}
+#content{
+    margin-top: 10px;
+    float: right;
+    width:70%;
+    opacity: 0.99;
+}

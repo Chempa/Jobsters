@@ -1,0 +1,90 @@
+#include "jobs.h"
+#include "industries.h"
+#include "companies.h"
+#include "users.h"
+
+@homelink :== linkTo("Home",url("Jobs","index"))
+
+@loginlink :== linkTo("Login",url("Account","login"))
+
+@advertiselink :== linkTo("Advertise",url("Jobs","addjob"))
+
+@registerlink :== linkTo("Register",url("Account","signup"))
+
+@searchform |== formTag(url("Jobs","search"))
+
+@searchmessage ~ tfetch(QString, message); eh(message);
+
+@addform |== formTag(url("Jobs","addjob"),Tf::Post,true)
+
+@searchform |== formTag(url("Jobs","search"))
+
+@selfcontroller + echo("value=\"" + controller()->name() + "\"")
+
+@selfaction + echo("value=\"" + controller()->activeAction() + "\"")
+
+@searchmessage ~=$ notice
+
+@foreachindustry :
+tfetch(QList<Industries>, industryList);
+tfetch(QStringList,uirel);
+for (const auto &i : industryList) {
+	QString checkattrib = "";
+	if(uirel.contains(QString::number(i.id()))){
+		checkattrib = "checked";
+	}
+    %%
+}
+
+@indval +== "value=\"" + QString::number(i.id()) + "\" " + checkattrib
+
+@sidebarindustryname ~= "  "+i.name()
+
+@foreachcompany :
+tfetch(QList<Companies>, companyList);
+tfetch(QStringList,ucrel);
+for (const auto &i : companyList) {
+	QString checkattrib = "";
+	if(ucrel.contains(QString::number(i.id()))){
+		checkattrib = "checked";
+	}
+    %%
+}
+
+@sidebarcompanyname ~= "  "+ i.name() 
+
+@comval +== "value=\"" + QString::number(i.id()) + "\" " + checkattrib
+
+@userpreference |== formTag(url("Account","userpreference"))
+
+@eachcompany :
+tfetch(QList<Companies>, companyList2);
+for(const auto &i : companyList2){
+	%%
+}
+
+@nameofcompany ~= i.name()
+
+@valueofcompany + echo("value=\""+i.name()+"\"")
+
+@eachindustry :
+tfetch(QList<Industries>, industryList2);
+for(const auto &i : industryList2){
+	%%
+}
+
+@nameofindustry ~= i.name()
+
+@valueofindustry + echo("value=\""+QString::number(i.id())+"\"")
+
+@iflogin :
+tfetch(Users,loginUser);
+for(int i = 0 ;i<1; i++){
+	QString atag = "<li><a href=\"/Account/signup\">Register</a></li><li><a href=\"/Account/login\">Login</a></li>";
+	if(!loginUser.isNull()){
+		atag = "<li><a href=\"/Account/logout\">Logout</a></li>";
+	}
+	%%
+}
+
+@logouttag :== atag

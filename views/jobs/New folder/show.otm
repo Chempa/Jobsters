@@ -1,0 +1,32 @@
+#include "jobs.h"
+
+#init
+ tfetch(Jobs, jobs);
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@error_msg ~=$ error
+
+@notice_msg ~=$ notice
+
+@id ~= jobs.id()
+
+@title ~= jobs.title()
+
+@location ~= jobs.location()
+
+@wage ~= jobs.wage()
+
+@shortdescription ~= jobs.shortdescription()
+
+@dateposted ~= jobs.dateposted()
+
+@closingdate ~= jobs.closingdate()
+
+@industry ~= jobs.industry()
+
+@company ~= jobs.company()
+
+@link_to_edit :== linkTo("Edit", urla("save", jobs.id()))
+
+@link_to_index :== linkTo("Back", urla("index"))

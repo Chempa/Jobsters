@@ -1,0 +1,22 @@
+#include "companies.h"
+
+#init
+ tfetch(QVariantMap, companies);
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@error_msg ~=$ error
+
+@notice_msg ~=$ notice
+
+@entry_form |== formTag(urla("create"))
+
+@name |== inputTextTag("companies[name]", companies["name"].toString())
+
+@email |== inputTextTag("companies[email]", companies["email"].toString())
+
+@website |== inputTextTag("companies[website]", companies["website"].toString())
+
+@imagepath |== inputTextTag("companies[imagepath]", companies["imagepath"].toString())
+
+@link_to_index |== linkTo("Back", urla("index"))

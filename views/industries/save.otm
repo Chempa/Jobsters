@@ -1,0 +1,20 @@
+#include "industries.h"
+
+#init
+ tfetch(QVariantMap, industries);
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@error_msg ~=$ error
+
+@notice_msg ~=$ notice
+
+@edit_form |== formTag(urla("save", industries["id"]))
+
+@id |== inputTextTag("industries[id]", industries["id"].toString(), a("readonly", "readonly"));
+
+@name |== inputTextTag("industries[name]", industries["name"].toString());
+
+@link_to_show |== linkTo("Show", urla("show", industries["id"]))
+
+@link_to_index |== linkTo("Back", urla("index"))

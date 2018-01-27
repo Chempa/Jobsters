@@ -1,0 +1,56 @@
+body{
+    background-image: url("../images/robe.png");
+}
+#profcyrux{
+    width: 200px;
+    height: 200px;
+    border-radius:200px;
+}
+#sidebar{
+    margin: 0;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 310px;
+    background-color: rgba(255,255,255,0.5);
+}
+#profcyrux:Hover{
+    width: 250px;
+    height: 250px;
+}
+#imgcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+
+}
+#contact{
+    padding: 10px;
+    text-align: center;
+}
+#contactcontent{
+}
+img.socialimg{
+    width:100px;
+    height: 100px;
+}
+td{
+    text-align: left;
+    padding: 5px;
+}
+#aboutcontent{
+    background-color: rgba(255,255,255,0.8);;
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-family: Tahoma;
+
+}
+#aboutheader{
+    font-size: 15px;
+}
+

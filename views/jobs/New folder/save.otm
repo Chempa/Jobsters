@@ -1,0 +1,34 @@
+#include "jobs.h"
+
+#init
+ tfetch(QVariantMap, jobs);
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@error_msg ~=$ error
+
+@notice_msg ~=$ notice
+
+@edit_form |== formTag(urla("save", jobs["id"]))
+
+@id |== inputTextTag("jobs[id]", jobs["id"].toString(), a("readonly", "readonly"));
+
+@title |== inputTextTag("jobs[title]", jobs["title"].toString());
+
+@location |== inputTextTag("jobs[location]", jobs["location"].toString());
+
+@wage |== inputTextTag("jobs[wage]", jobs["wage"].toString());
+
+@shortdescription |== inputTextTag("jobs[shortdescription]", jobs["shortdescription"].toString());
+
+@dateposted |== inputTextTag("jobs[dateposted]", jobs["dateposted"].toString());
+
+@closingdate |== inputTextTag("jobs[closingdate]", jobs["closingdate"].toString());
+
+@industry |== inputTextTag("jobs[industry]", jobs["industry"].toString());
+
+@company |== inputTextTag("jobs[company]", jobs["company"].toString());
+
+@link_to_show |== linkTo("Show", urla("show", jobs["id"]))
+
+@link_to_index |== linkTo("Back", urla("index"))

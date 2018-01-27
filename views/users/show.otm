@@ -1,0 +1,24 @@
+#include "users.h"
+
+#init
+ tfetch(Users, users);
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@error_msg ~=$ error
+
+@notice_msg ~=$ notice
+
+@id ~= users.id()
+
+@name ~= users.name()
+
+@phone ~= users.phone()
+
+@country ~= users.country()
+
+@password ~= users.password()
+
+@link_to_edit :== linkTo("Edit", urla("save", users.id()))
+
+@link_to_index :== linkTo("Back", urla("index"))

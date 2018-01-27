@@ -1,0 +1,96 @@
+#content{
+
+}
+#formwrapper{
+	padding-left: 70px;
+	margin-bottom: 20px;
+
+}
+#formwrapper form:hover{
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+
+}
+#formwrapper form{
+	width: 360px;
+	min-width: 400px;
+	float: right;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:1px solid grey;
+    margin-bottom: 40px;
+    border-bottom-left-radius:40px;
+    border-top-right-radius:40px;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+.input{
+	margin-bottom: 20px;
+	height: 40px;
+	border:0px;
+	border-bottom: 2px solid grey;
+	width: 90%;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 16px;
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+	border-bottom-left-radius:40px;
+    border-top-right-radius:40px;
+}
+.input:hover{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+#submit:hover{
+	cursor: pointer;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+#submit{
+	margin-bottom: 50px;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 16px;
+	width: 200px;
+	height: 60px;
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+	border-bottom-left-radius:40px;
+    border-top-right-radius:40px;
+}
+fieldset{
+	border:0;
+	border-top: 1px solid grey;
+	padding: 10px;
+	width: 80%;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	font-family: Tahoma;
+	font-size: 14px;
+}
+#addjobmessage{
+	margin:30px;
+}
+#companyimage{
+	float: right;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+	margin-bottom: 30px;
+	width: 250px;
+    height: 80px;
+}
+#job{
+	font-family: tahoma;
+}
+.label{
+	font-size: 14px;
+	font-weight: bold;
+}
+#applyjob hr{
+	color: rgba(67,67,255,0.5);;
+	width: 95%;
+}
+#ttl{
+	padding: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}

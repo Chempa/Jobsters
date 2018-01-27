@@ -1,0 +1,24 @@
+#include "companies.h"
+
+#init
+ tfetch(Companies, companies);
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@error_msg ~=$ error
+
+@notice_msg ~=$ notice
+
+@id ~= companies.id()
+
+@name ~= companies.name()
+
+@email ~= companies.email()
+
+@website ~= companies.website()
+
+@imagepath ~= companies.imagepath()
+
+@link_to_edit :== linkTo("Edit", urla("save", companies.id()))
+
+@link_to_index :== linkTo("Back", urla("index"))

@@ -1,0 +1,78 @@
+#content{
+
+}
+#formwrapper{
+	padding-left: 70px;
+	margin-bottom: 20px;
+}
+#formwrapper form{
+	width: 360px;
+	min-width: 400px;
+	float: left;
+	text-align: center;
+}
+.input{
+	margin-bottom: 20px;
+	height: 40px;
+	border:0px;
+	border-bottom: 2px solid grey;
+	width: 90%;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 16px;
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+	border-bottom-left-radius:20px;
+    border-top-right-radius:20px;
+}
+.input:hover{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+#formwrapper textarea{
+	width: 100%;
+	height: 200px;
+	font-family: Tahoma;
+	font-size: 16px;
+	margin-bottom: 20px;
+	padding: 10px;
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+	border-bottom-left-radius:20px;
+    border-top-right-radius:20px;
+}
+#formwrapper textarea:hover{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+#file{
+	padding-bottom: 10px;
+	border-bottom: 0px solid grey;
+	margin-bottom: 20px;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 16px;
+}
+#submit:hover{
+	cursor: pointer;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+#submit{
+	margin-bottom: 50px;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 16px;
+	width: 100%;
+	height: 60px;
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+	border-bottom-left-radius:40px;
+    border-top-right-radius:40px;
+}
+fieldset{
+	border:0;
+	border-top: 1px solid grey;
+	padding: 10px;
+
+}
+#addjobmessage{
+	margin:30px;
+}

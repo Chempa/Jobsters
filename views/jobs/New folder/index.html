@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title data-tf="@head_title"></title>
+</head>
+<body>
+
+<h1>Listing Jobs</h1>
+
+<a href="#" data-tf="@link_to_entry">New entry</a><br />
+<br />
+<table border="1" cellpadding="5" style="border: 1px #d0d0d0 solid; border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Location</th>
+    <th>Wage</th>
+    <th>Shortdescription</th>
+    <th>Dateposted</th>
+    <th>Closingdate</th>
+    <th>Industry</th>
+    <th>Company</th>
+    <th></th>
+  </tr>
+  <tr data-tf="@for">
+    <td data-tf="@id"></td>
+    <td data-tf="@title"></td>
+    <td data-tf="@location"></td>
+    <td data-tf="@wage"></td>
+    <td data-tf="@shortdescription"></td>
+    <td data-tf="@dateposted"></td>
+    <td data-tf="@closingdate"></td>
+    <td data-tf="@industry"></td>
+    <td data-tf="@company"></td>
+    <td>
+      <a href="#" data-tf="@link_to_show">Show</a>
+      <a href="#" data-tf="@link_to_edit">Edit</a>
+      <a href="#" data-tf="@link_to_remove">Remove</a>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

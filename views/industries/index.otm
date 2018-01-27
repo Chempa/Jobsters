@@ -1,0 +1,21 @@
+#include "industries.h"
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@for :
+tfetch(QList<Industries>, industriesList);
+for (const auto &i : industriesList) {
+    %%
+}
+
+@id ~= i.id()
+
+@name ~= i.name()
+
+@link_to_show :== linkTo("Show", urla("show", i.id()))
+
+@link_to_edit :== linkTo("Edit", urla("save", i.id()))
+
+@link_to_remove :== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')")
+
+@link_to_entry :== linkTo("New entry", urla("create"))

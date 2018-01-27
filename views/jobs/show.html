@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/show.css">
+    <link rel="stylesheet" href="/css/standard.css">
+    <title data-tf="@pagetitle"></title>
+
+</head>
+
+<body>
+<div id="pagewrapper">
+<div id="header">
+    <a data-tf="@homelisnk"><h1>Jobsters<sub>infinite jobs</sub></h1></a>
+    <hr>
+    <ul id="navilist">
+        <li><a data-tf="@homelink">Home</a></li>
+        <li><a data-tf="@advertiselink">Advertise</a></li>
+        <span data-tf="@iflogin"><span data-tf="@logouttag"><li><a data-tf="@registerlink">Register</a></li>
+        <li><a data-tf="@loginlink">Login</a></li></span>
+        </span>
+        <li><a data-tf="@aboutlink">About</a></li>
+    </ul>
+    <hr>
+</div>
+<div id="sidebar">
+    <div id="searcher"><hr><hr>
+        <form method="post" data-tf="@searchform" name="fm">
+            <input type="text" name="jobtitle" placeholder="eg. Programmer"><br><hr><hr>
+            <input type="text" name="location" placeholder="eg. Kumasi"><br><hr><hr><hr>
+            <input type="text" name="companyname" placeholder="eg.google"><br><hr><hr>
+            <input type="text" name="industryname" placeholder="eg. Constructions"><br><hr><hr>
+            <input type="number" name="jobid" placeholder="Job id eg. 12"><br><hr><hr>
+            <input id="searchbtn" type="submit" value="Search" >
+            <br>
+           <p id="searchmessage" data-tf="@searchmessage"></p>
+            <br><br>
+        </form>
+    </div>
+    
+    <div id="dashboard">
+        <p>Welcome <span >Guest</span></p><br>
+        <form id="userpreference" method="post" data-tf="@userpreference" >
+            <input type="hidden" name="selfcontroller" data-tf="@selfcontroller">
+            <input type="hidden" name="selfaction" data-tf="@selfaction">
+            <div id="usercompanies">
+                <label class="l1">My Companies</label><br><hr><hr>
+                <p data-tf="@foreachcompany">
+                <input  type="checkbox" data-tf="@comval" name="mycompanies[]" onchange="modfn(this)"><span data-tf="@sidebarcompanyname">  Microsoft Ghana</span><br><br></p>
+            </div>
+        
+            <div id="userindustries">
+                <label class="l1">My Industries</label><br><hr><hr>
+                <p data-tf="@foreachindustry">
+                <input type="checkbox" name="myindustries[]" data-tf="@indval" onchange="modfn(this)"><span data-tf="@sidebarindustryname">  Apple Ghana</span><br><br><br></p>
+            </div> 
+            <br><br>
+            
+            <br><br>
+            <hr><hr><input id="updatepreference" type="submit" value="Update">
+
+        </form>
+
+    </div>
+</div>
+<div id="content">
+    <div id="job">
+        <img data-tf="@imagesrc" id="companyimage" >
+        <label class="label">Title</label><p data-tf="@jobtitle">General Manager</p><br>
+        <label class="label">Location</label><P data-tf="@location">Kumasi</P><br>
+        <label class="label">Wage</label><p data-tf="@wage">Ghc 5000.00 Per Month</p><br>
+        <label class="label">Description</label><p data-tf="@shortdescription">lks asdf we asdf we asdf w sd asew asdf we asdf we asdf we aef wer asdf sad fsa dfsdaflks asdf we asdf we asdf w sd asew asdf we asdf we asdf we aef wer asdf sad fsa dfsdaflks asdf we asdf we asdf w sd asew asdf we asdf we asdf we aef wer asdf sad fsa dfsdaf</p><br><br>
+        <div id="formwrapper">
+        <form id="applyjob">
+            <label id="ttl">Apply Now!!!</label>
+            <hr><hr><input class="input" type="text" name="fullname" placeholder="Full name">
+            <hr><hr><input class="input" type="text" name="phone" placeholder="Phone"><br>
+            <hr><hr><input class="input" type="email" name="email" placeholder="email"><br>
+            <fieldset><legend>Upload a CV</legend>
+            <input type="file" name="cv"></fieldset>
+            <hr><hr><input id="submit" type="submit" value="Send"><br>
+        </form>
+    </div>
+        <label class="label">Date Posted</label><p data-tf="@date-posted">12/3/1242</p><br>
+        <label class="label">Closing Date</label><p data-tf="@closingdate">12/12/3432</p><br>
+        <label class="label">Industry</label><p data-tf="@industryname">Mining Industry</p><br>
+        <label class="label">Company</label><p data-tf="@companyname">Google Ghana</p><br><br>
+        <label class="label">Email</label><p data-tf="@email">admin@gmail.com</p><br>
+        <label class="label">Website</label><p data-tf="@website">google.com.gh</p><br>
+        <br>
+
+    </div>
+    
+</div>
+
+<div id="delimiter"></div>
+</div>
+<footer>
+    All Rights Reserved &copy 2017 Cyrux Mensah
+</footer>
+</body>
+</html>

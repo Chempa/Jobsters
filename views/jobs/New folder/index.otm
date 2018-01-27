@@ -1,0 +1,35 @@
+#include "jobs.h"
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@for :
+tfetch(QList<Jobs>, jobsList);
+for (const auto &i : jobsList) {
+    %%
+}
+
+@id ~= i.id()
+
+@title ~= i.title()
+
+@location ~= i.location()
+
+@wage ~= i.wage()
+
+@shortdescription ~= i.shortdescription()
+
+@dateposted ~= i.dateposted()
+
+@closingdate ~= i.closingdate()
+
+@industry ~= i.industry()
+
+@company ~= i.company()
+
+@link_to_show :== linkTo("Show", urla("show", i.id()))
+
+@link_to_edit :== linkTo("Edit", urla("save", i.id()))
+
+@link_to_remove :== linkTo("Remove", urla("remove", i.id()), Tf::Post, "confirm('Are you sure?')")
+
+@link_to_entry :== linkTo("New entry", urla("create"))

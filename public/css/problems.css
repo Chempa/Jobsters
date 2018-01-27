@@ -1,0 +1,49 @@
+
+body{
+    background-image: url("../images/sea.jpg");
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.99;
+}
+
+
+
+#problems{
+    border-collapse: collapse;
+    width: 60%;
+    text-align:center;
+    padding:30px;
+    font-size:17px;
+    margin-top: 40px;
+}
+.even{
+    background-color:rgba(0,0,0,0.2);
+    color:white;
+    padding:20px;
+}
+.odd{
+    background-color:rgba(100,100,100,0.2);
+    color:white;
+    padding:20px;
+}
+.heading{
+    background-color:rgba(100,100,100,0.2);
+    color: white;
+
+}
+a{
+    color:white;
+}
+td{
+    padding:10px;
+}
+.odd:Hover{
+    background-color: rgba(122,122,122,0.7);
+}
+.even:Hover{
+    background-color: rgba(122,122,122,0.7);
+}

@@ -1,0 +1,26 @@
+#include "users.h"
+
+#init
+ tfetch(QVariantMap, users);
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@error_msg ~=$ error
+
+@notice_msg ~=$ notice
+
+@edit_form |== formTag(urla("save", users["id"]))
+
+@id |== inputTextTag("users[id]", users["id"].toString(), a("readonly", "readonly"));
+
+@name |== inputTextTag("users[name]", users["name"].toString());
+
+@phone |== inputTextTag("users[phone]", users["phone"].toString());
+
+@country |== inputTextTag("users[country]", users["country"].toString());
+
+@password |== inputTextTag("users[password]", users["password"].toString());
+
+@link_to_show |== linkTo("Show", urla("show", users["id"]))
+
+@link_to_index |== linkTo("Back", urla("index"))

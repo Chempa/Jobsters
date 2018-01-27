@@ -1,0 +1,58 @@
+#content{
+
+}
+#formwrapper{
+	padding-left: 70px;
+	margin-bottom: 20px;
+}
+#formwrapper form{
+	width: 360px;
+	min-width: 400px;
+	float: left;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+	margin-bottom: 20px;
+	height: 40px;
+	border:0px;
+	border-bottom: 2px solid grey;
+	width: 90%;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 16px;
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+	border-bottom-left-radius:40px;
+    border-top-right-radius:40px;
+}
+.input:hover{
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+#submit:hover{
+	cursor: pointer;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+
+}
+#submit{
+	margin-bottom: 50px;
+	text-align: center;
+	font-family: Tahoma;
+	font-size: 16px;
+	width: 200px;
+	height: 60px;
+	box-shadow: 0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19);
+	border-bottom-left-radius:40px;
+    border-top-right-radius:40px;
+}
+fieldset{
+	border:0;
+	border-top: 1px solid grey;
+	padding: 10px;
+
+}
+#addjobmessage{
+	margin:30px;
+}

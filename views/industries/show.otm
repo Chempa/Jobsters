@@ -1,0 +1,18 @@
+#include "industries.h"
+
+#init
+ tfetch(Industries, industries);
+
+@head_title ~= controller()->name() + ": " + controller()->activeAction()
+
+@error_msg ~=$ error
+
+@notice_msg ~=$ notice
+
+@id ~= industries.id()
+
+@name ~= industries.name()
+
+@link_to_edit :== linkTo("Edit", urla("save", industries.id()))
+
+@link_to_index :== linkTo("Back", urla("index"))

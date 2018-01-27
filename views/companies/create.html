@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title data-tf="@head_title"></title>
+</head>
+<body>
+<p style="color: red" data-tf="@error_msg"></p>
+<p style="color: green" data-tf="@notice_msg"></p>
+
+<h1>New Companies</h1>
+
+<form method="post" data-tf="@entry_form">
+  <p>
+    <label>Name<br /><input data-tf="@name" /></label>
+  </p>
+  <p>
+    <label>Email<br /><input data-tf="@email" /></label>
+  </p>
+  <p>
+    <label>Website<br /><input data-tf="@website" /></label>
+  </p>
+  <p>
+    <label>Imagepath<br /><input data-tf="@imagepath" /></label>
+  </p>
+  <p>
+    <input type="submit" value="Create" />
+  </p>
+</form>
+
+<a href="#" data-tf="@link_to_index">Back</a>
+
+</body>
+</html>

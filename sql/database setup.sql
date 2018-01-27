@@ -1,0 +1,12 @@
+	create database jobsters_db DEFAULT CHARACTER SET utf8;
+	use jobsters_db;
+	create table companies(id int(20) auto_increment primary key,name char(50),email char(30) not null, website char(30), imagepath char(100),unique(name)) DEFAULT CHARSET=utf8;	
+	create table industries(id int(20) auto_increment primary key,name char(50),unique(name)) DEFAULT CHARACTER SET utf8;
+	create table jobs(id int(20) auto_increment primary key,title char(100) not null,location char(50),wage char(20),shortdescription text,dateposted datetime ,closingdate datetime,industry int(20) ,company int(20) , foreign key(industry) references industries(id), foreign key(company) references companies(id)) DEFAULT CHARACTER SET utf8;
+	create table users(id int(20) auto_increment primary key,name char(50),email char(30) not null,phone char(20) ,country char (30),password varchar(20) not null, unique(phone)) DEFAULT CHARACTER SET utf8;	
+	create table usersindustries(relphone int(20),relindustry int(20),foreign key(relphone) references users(id),foreign key (relindustry) references industries(id), unique(relphone,relindustry) ) DEFAULT CHARACTER SET utf8;
+	create table userscompanies(relphone int(20),relcompany int(20),foreign key(relphone) references users(id),foreign key (relcompany) references companies(id) , unique(relphone,relcompany)) DEFAULT CHARACTER SET utf8;
+	insert into industries(name) values("Art & heritage"),("Charities"),("Construction"),("Design"),("Engineering"),("Environment"),("Finance & Accounting"),("Further education"),("Government & politics"),("Health"),("Higher education"),("Hospitality"),("Housing"),("Legal"),("Leisure"),("Marketing & PR"),("Media"),("Recruitment"),("Retail & FMCG"),("Schools"),("Science"),("Skilled trade"),("Social care"),("Social Enterprise"),("Technology"),("Travel & Transport");
+	CREATE TABLE session (id VARCHAR(50) PRIMARY KEY, data BLOB, updated_at TIMESTAMP);
+	Create View uirel as select Users.phone,usersindustries.relindustry from users,usersindustries where Users.id = usersindustries.relphone;
+	Create View ucrel as select Users.phone,userscompanies.relcompany from users,userscompanies where Users.id = userscompanies.relphone;
